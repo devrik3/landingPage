@@ -1,0 +1,673 @@
+*{
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	box-sizing: border-box;
+}
+body{
+	background: #232323;
+}
+header {
+	width: 100%;
+	height: 3rem;
+	padding: .75rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header h2{
+	font-family: 'Roboto Mono', monospace;
+	color: #f4f4f5;
+	font-weight: 400;
+}
+header a{
+	color: #f4f4f5;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 200;
+	text-decoration: none;
+}
+header a:hover{
+	filter: brightness(80%);
+}
+main {
+	padding: 1rem;
+}
+main .cta {
+	display: flex;
+	justify-content: space-around;
+	gap: 10px;
+}
+main .cta-content{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 25rem;
+}
+main .cta-content h1{
+	font-family: 'Roboto mono', monospace;
+	font-size: 20pt;
+	color: #f3f3f3;
+}
+main .cta-content p{
+	font-family: 'Open sans', sans-serif;
+	font-size: 12pt;
+	color: #E9E9E9;
+}
+main .cta-content mark{
+	background: #f3f3f3;
+}
+main .cta-content button{
+	width: 10rem;
+	height: 2.75rem;
+	border-radius: 5px;
+	border: 2px solid #F79F23;
+	color: #f3f3f3;
+	background: transparent;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+main .cta-content button:hover{
+	background: #F79F23;
+	transition: .25s;
+	cursor: pointer;
+	color: #232323;
+}
+main .cta img{
+	width: 200px;
+}
+
+main hr {
+	width: 100%;
+	height: 1px;
+	border: .5px solid #f3f3f3;
+	margin: 1rem 0;
+}
+main .beneficios {
+	padding-top: 1rem;
+}
+main .beneficios-content {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 10px;
+}
+main .beneficios-content .box{
+	background: #D9D9D9;
+	display: flex;
+	flex-direction: column;
+	padding: .75rem .5rem;
+	outline: #333;
+	width: 100%;
+	height: 14rem;
+	justify-content: space-between;
+	align-items: center;
+	filter:  drop-shadow(2px 2px 3px rgba(0,0,0, .20));
+}
+main .beneficios-content .box svg{
+	background: #f3f3f3;
+	width: 4rem;
+	height: 4rem;
+	padding: .75rem;
+	margin-bottom: .5rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter:  drop-shadow(2px 2px 3px rgba(0,0,0, .10));
+	color: #F79F23;
+}
+main .beneficios-content .box p{
+	font-family: 'Open sans', sans-serif;
+	font-size: 10pt;
+	color: #232323;
+}
+main .beneficios-content .box p mark{
+	background: #F79F23;
+	padding: .10rem;
+}
+main .review-card {
+	padding-top: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 10px;
+	overflow-y: scroll;
+}
+main .review-card .card-content{
+	background: #f3f3f3;
+	padding: .5rem;
+	outline: #333;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+main .review-card .card-content img{
+	width: 100px;
+}
+main .review-card .card-content h2{
+	font-family: 'Roboto Mono', monospace;
+	font-size: 14pt;
+	color: #232323;
+	margin-bottom: 10px;
+}
+main .review-card .card-content p{
+	font-family: 'Open sans', sans-serif;
+	font-size: 12pt;
+	color: #232323;
+}
+main .curso-beneficios{
+	background: transparent;
+	margin: 1rem 0;
+	padding: .5rem;
+}
+main .curso-beneficios details {
+	background: #F79F23;
+	padding: .5rem;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: 16pt;
+	color: #232323;
+	text-transform: uppercase;
+}
+main .curso-beneficios details span {
+	padding-left: .5rem;
+	font-size: 13pt;
+}
+main .curso-beneficios details span svg {
+	margin-right: .5rem;
+}
+main .curso-beneficios details:focus{
+	outline: none;
+}
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: .5rem;
+	width: 100%;
+	height: 3rem;
+	border-top: 2px solid #f3f3f3;
+	color: #f3f3f3;
+	text-decoration: none;
+
+	font-family: 'Open sans', sans-serif;
+	font-size: 12pt;
+}
+footer a{
+	padding: .25rem;
+	color: #f3f3f3;
+	text-decoration: none;
+
+	font-family: 'Open sans', sans-serif;
+	font-size: 12pt;
+}
+footer a:hover{
+	filter: brightness(70%);
+	cursor: pointer;
+	background: rgba(255, 255, 255, .1)
+}
+footer .heart p{
+	color: #FF2400;
+	animation: heartScale .60s ease-in-out infinite both;
+}
+/* .compra-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	height: 100vh;
+}
+main .finalizar-compra{
+	background: #f3f3f3;
+	padding: .5rem;
+	width: 100%;
+	outline: 2px solid #f3f3f3;
+}
+main .finalizar-compra h2{
+	font-family: 'Open sans', sans-serif;
+	font-size: 22pt;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+main .finalizar-compra .input-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+main .finalizar-compra .input-wrap label{
+	background: transparent;
+	border: 2px solid #232323;
+	width: 100%;
+	height: 3.25rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	padding: .25rem 0 .25rem .25rem;
+}
+main .finalizar-compra .input-wrap label svg{
+	color: #F79F23;
+	width: 20px;
+	height: 20px;
+}
+main .finalizar-compra .input-wrap label input{
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 2.8rem;
+	font-size: 12pt;
+}
+main .finalizar-compra .input-wrap label input:focus{
+	outline: none;
+}
+main .finalizar-compra .input-wrap label button{
+	width: 5rem;
+	height: 3rem;
+	border: 5px solid #232323;
+	background: #232323;
+	color: #f3f3f3;
+}
+main .finalizar-compra .input-wrap span{
+	display: flex;
+}
+main .finalizar-compra .input-wrap .entrega{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #232323;
+	color: #F79F23;
+	padding: 2rem .5rem;
+}
+main .finalizar-compra .input-wrap span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main .finalizar-compra .input-wrap .entrega svg{
+	font-size: 50pt!important;
+	margin-right: .5rem;
+}
+main .finalizar-compra .input-wrap .entrega .informacoes {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+main .finalizar-compra .input-wrap .entrega h2{
+	margin: 0;
+	font-size: 18pt;
+}
+main .finalizar-compra .input-wrap .entrega P{
+	font-size: 12pt;
+	font-family: 'open sans', sans-serif;
+}
+main .finalizar-compra .input-wrap .entrega div {
+	display: flex;
+	gap: 20px;
+}
+main .finalizar-compra .input-wrap .entrega div h2{
+	font-size: 20pt;
+	font-family: 'open sans', sans-serif;
+	font-weight: 400;
+}
+main .finalizar-compra .input-wrap .metodo-pagamento{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #232323;
+	color: #F79F23;
+	padding: 2rem .5rem;
+}
+main .finalizar-compra .input-wrap .metodo-pagamento .fa-credit-card{
+	font-size: 25pt;
+	margin-right: .5rem;
+}
+main .finalizar-compra .input-wrap .metodo-pagamento span {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+}
+main .finalizar-compra .input-wrap .metodo-pagamento h2{
+	margin: 0;
+	font-size: 18pt;
+}
+main .finalizar-compra .input-wrap .metodo-pagamento input{
+	width: .80rem;
+	height: .80rem;
+}
+main .finalizar-compra .btn-menu {
+	display: flex;
+	gap: 0 10px;
+}
+main .finalizar-compra .btn-menu button{
+	width: 100%;
+	height: 3.25rem;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+
+	border: 2px solid #232323;
+	background: #232323;
+	color: #F79F23;
+	font-size: 11pt;
+}
+main .finalizar-compra .btn-menu button:hover{
+	background: transparent;
+	color: #232323;
+	transition: .25s;
+	cursor: pointer;
+}
+
+main .finalizar-compra hr{
+	background: #232323;
+	width: 80%;
+	margin: 1rem auto;
+}
+#bodyBuy{
+	overflow: hidden;
+}
+
+.wrap{
+	display: none;
+}
+.popup-addcart{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, .25);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup-addcart span{
+	background: #f3f3f3;
+	padding: .75rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 40px 0;
+
+	font-family: 'Open sans', sans-serif;
+	font-size: 14pt;
+	font-weight: 400;
+}
+.popup-addcart svg{
+	background: #15C514;
+	color: #f3f3f3;
+	padding: 1rem;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.popup-addcart .svg-inline--fa.fa-w-18{
+	width: 100px;
+	animation: circlePulse .30s ease both infinite;
+}
+
+.d-block{display: block;} */
+
+
+
+@media screen and (min-width: 980px) {
+	header {
+		width: 100%;
+		height: 4rem;
+		padding: 1rem;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	header h2{
+		font-family: 'Roboto Mono', monospace;
+		color: #f4f4f5;
+		font-weight: 400;
+		font-size: 15pt;
+	}
+	header a{
+		color: #f4f4f5;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 200;
+		text-decoration: none;
+	}
+	header a:hover{
+		filter: brightness(80%);
+		transition: .25s;
+	}
+	main {
+		padding: 2rem;
+	}
+	main .cta {
+		display: flex;
+		justify-content: space-around;
+		gap: 10px;
+	}
+	main .cta-content{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 30rem;
+	}
+	main .cta-content h1{
+		font-family: 'Roboto mono', monospace;
+		font-size: 25pt;
+		color: #f3f3f3;
+	}
+	main .cta-content p{
+		font-family: 'Open sans', sans-serif;
+		font-size: 14pt;
+		color: #E9E9E9;
+	}
+	main .cta-content mark{
+		background: #f3f3f3;
+	}
+	main .cta-content button{
+		width: 15rem;
+		height: 3rem;
+		border-radius: 5px;
+		font-size: 12pt;
+		border: 2px solid #F79F23;
+		color: #f3f3f3;
+		background: transparent;
+
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	main .cta-content button:hover{
+		background: #F79F23;
+		transition: .25s;
+		cursor: pointer;
+		color: #232323;
+	}
+	main .cta img{
+		width: 250px;
+	}
+
+	main hr {
+		width: 100%;
+		height: 1px;
+		border: .5px solid #f3f3f3;
+		margin: 2rem 0;
+	}
+	main .beneficios {
+		padding-top: 1rem;
+	}
+	main .beneficios-content {
+		overflow-y: hidden;
+		overflow-x: scroll;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 10px;
+	}
+	main .beneficios-content .box{
+		background: #D9D9D9;
+		display: flex;
+		flex-direction: column;
+		padding: .75rem .5rem;
+		outline: #333;
+		width: 100%;
+		height: 15rem;
+		justify-content: space-between;
+		align-items: center;
+		filter:  drop-shadow(2px 2px 3px rgba(0,0,0, .20));
+	}
+	main .beneficios-content .box svg{
+		background: #f3f3f3;
+		width: 6rem;
+		height: 6rem;
+		padding: 1rem;
+		margin-bottom: .25rem;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		filter:  drop-shadow(2px 2px 3px rgba(0,0,0, .10));
+		color: #F79F23;
+	}
+	main .beneficios-content .box p{
+		font-family: 'Open sans', sans-serif;
+		font-size: 13pt;
+		color: #232323;
+	}
+	main .beneficios-content .box p mark{
+		background: #F79F23;
+		padding: .10rem;
+	}
+	main .review-card {
+		padding-top: 1rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 10px;
+		overflow-y: scroll;
+	}
+	main .review-card .card-content{
+		background: #f3f3f3;
+		padding: .5rem;
+		outline: #333;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	main .review-card .card-content img{
+		width: 100px;
+	}
+	main .review-card .card-content h2{
+		font-family: 'Roboto Mono', monospace;
+		font-size: 14pt;
+		color: #232323;
+		margin-bottom: 10px;
+	}
+	main .review-card .card-content p{
+		font-family: 'Open sans', sans-serif;
+		font-size: 13pt;
+		color: #232323;
+		padding: .5rem;
+	}
+	main .curso-beneficios{
+		background: transparent;
+		margin: 1rem 0;
+		padding: .5rem;
+	}
+	main .curso-beneficios details {
+		background: #F79F23;
+		padding: 1rem;
+		margin: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		font-size: 16pt;
+		color: #232323;
+		text-transform: uppercase;
+	}
+	main .curso-beneficios details:hover{
+		cursor: pointer;
+		filter: brightness(80%);
+		transition: .25s ease-in-out;
+		transform: scale(1.0015)
+	}
+	main .curso-beneficios details span {
+		padding-left: .5rem;
+		font-size: 13pt;
+	}
+	main .curso-beneficios details span svg {
+		margin-right: .5rem;
+	}
+	main .curso-beneficios details:focus{
+		outline: none;
+	}
+	footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: .5rem;
+		width: 100%;
+		height: 3rem;
+		border-top: 2px solid #f3f3f3;
+		color: #f3f3f3;
+		text-decoration: none;
+
+		font-family: 'Open sans', sans-serif;
+		font-size: 12pt;
+	}
+	footer a{
+		padding: .25rem;
+		color: #f3f3f3;
+		text-decoration: none;
+
+		font-family: 'Open sans', sans-serif;
+		font-size: 12pt;
+	}
+	footer a:hover{
+		filter: brightness(70%);
+		cursor: pointer;
+		background: rgba(255, 255, 255, .1)
+	}
+}
+
+@keyframes heartScale {
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
